@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+
+
+body{
+    width: 100%;
+    color: white;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+:root{
+    --yellow: #c79900;
+    --black: #131415;
+    --grey: #2d3640;
+}
+
+header{
+    background-color: var(--yellow);
+    padding: 3rem 1rem 8rem 1rem;
+}
+
+
+
+/*Menu*/
+
+.header{
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img{
+    height: 100%;
+}
+
+.navbar,
+.navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list{
+    gap: 50px;
+}
+
+.navbar i{
+    font-size: 50px;
+    color: #f7f7f7;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+.navbar a{
+    color: white;
+    font-size: 22px;
+}
+
+.navbar-list li:last-child > a {
+    border: 1px solid white;
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 3px;
+    transition: all 0,3s linear;
+}
+
+.navbar-list li:last-child > a:hover{
+    background-color: white;
+    color: var(--grey);
+    transition: all 0,3s linear;
+    font-weight: 700;
+}
+
+.header-container{
+    position: sticky;
+    top: 0%;
+}
+
+
+@media (max-width: 992px) {
+
+    .header{
+        padding: 10px 50px 10px 50px;
+    }
+
+    .navbar i{
+        display: block;
+    }
+
+    .navbar-list{
+        position: absolute;
+        background-color: var(--black);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        display: none;
+        z-index: 9999;
+        height:calc(100vh - 100px);
+
+    }
+
+    #toggle-menu:checked + .navbar-list{
+        display: flex;
+     }
+}
+
+/*terminado el menu*/
+
+/*section 1*/
+
+#hero{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px; 
+   background-image: url(./imagenes/img.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: auto;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-container-hero{
+    max-width: max-content (40%, 300px);
+}
+
+.text-container-hero h2{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    color: red;
+}
+
+.text-container-hero p{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.primary-button{
+    background-color: var(--yellow);
+    border: 0px solid black;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.hero-img{
+    background-image: url(./imagenes/zapatillas\ adidas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 30%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+@media (max-width:992px){
+    .hero-img{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .inicio{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .text-container-hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+/*Terminada la section 1*/
+
+/*Section 2*/
+
+.description-section{
+    background: var(--black);
+    padding: 8rem 0;
+}
+
+#about-us{
+    gap: 15%;
+    flex-wrap: wrap;
+    padding: 8rem auto;
+}
+
+.about-img{
+    background-image: url(./imagenes/airforce.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.about-container{
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 200px 0px;
+    width: 95%;
+    max-width: 1300px;
+}
+.description-tittle{
+    color: red;
+}
+
+.description-cards{
+    display: flex;
+    gap: 40px;
+}
+
+.about-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(3, 3, 114);
+    height: 60px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.about-cards span{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media (max-width:768px){
+    .about-container{
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .about-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        
+    }
+ 
+ } 
+
+ /*terminada la section 2*/
+
+ 
+
+/*section 3*/
+
+
+.products-section{
+    padding: 8rem auto;
+}
+
+.product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.product-container img{
+    max-width: 200px;
+}
+.zapas{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0,0.1 );
+    position: relative;
+}
+
+.product-tittle{
+    text-transform: uppercase;
+    font-size: 2rem;
+    max-width: 200px;
+    margin-top: 2rem;
+    color: #131415;
+}
+
+.product-price{
+    color: var(--black);
+    font-weight: 200;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.btn-products{
+    background: var(--yellow);
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    padding: 1rem 5rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+@media (max-width:768px){
+    .product-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*terminada la section 3*/
+
+/*section contacto*/
+
+.contacto{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-image: url(./imagenes/Contacto\ 2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row;
+}
+
+.cotactanos{
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.cotactanos h1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color:var(--yellow);
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+.numero-mail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.datoss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.datoss ul{
+    display: flex;
+    flex-direction: column;
+ 
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.datos{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 12rem;
+}
+
+.datos2 p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+
+.datos2 p label{
+    display: flex;
+    align-items: flex-end;
+    color: rgb(191, 204, 7);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.datos2 p input{
+    height: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: var(--grey);
+}
+
+.datos2 p button{
+    width: 40%;
+    height: 45px;
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 15px;
+    border: 1px solid var(--black);
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+@media (max-width:1024px){
+    .contacto{
+        flex-direction: column;
+       justify-content: center;
+       height: auto;
+    }
+}
+
+.footer{
+    display: flex;
+    background-color: var(--black);
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+.social-icons{
+    display: flex;
+    gap: 20px;
+    background: #131415;
+}
+
+.login-register{
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    background:var(--yellow);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.login img{
+    width: 100px;
+}
+
+.login{
+    text-align: center;
+    margin: 1rem auto;
+    width: 500px;
+    gap: 50px;
+    background: rgb(99, 209, 99);
+    box-shadow: 10px 10px rgb(128 105 42 / 30%);
+}
+
+.register img{
+    width: 100px;
+}
+
+.Iniciar {
+    width: 100%;
+    margin: 9px 0px;
+    text-align: center;
+}
+
+.register{
+    text-align: center;
+    margin: 1rem auto;
+    width: 500px;
+    gap: 50px;
+    background: rgb(99, 209, 99);
+    box-shadow: 10px 10px rgb(128 105 42 / 30%);
+    
+}
+
+.sesion{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: black;
+    border: none;
+    margin: 25px 0;
+}
+
+.sesion input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: none;   
+    margin: 15px 0;
+
+}
+
+.button{
+    width: 20%;
+    height: 45px;
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 15px;
+    border: 1px solid var(--black);
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    margin: 20px;
+}
+
+.olvide{
+    display: flex;
+    justify-content: space-around;
+}
+
+.registrar{
+    width: 100%;
+    margin: 9px 0px;
+    text-align: center;
+}
+
+.regis{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 25px 0;
+    
+}
+
+.regis input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+}
+
